@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Free Trial(fdb0d1e7-7db9-4801-b846-25dc3f93f1ad)'
+    appType: 'webApp'
+    appName: 'AzureDevW'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
